@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<br>
+  <p>
+    Behaviors of materials are modeled with
+    Hosnegtad for concrete and elastic-perfect plastic for steel. <br>Effect of
+    confinement on core concrete, strain-hardening of steel, and tensile strength of concrete are
+    neglected. 
+  </p>
+    <form action="main.php" method="get" target="frame_plot">
+        <strong>Material Properties: </strong><br>
+        <label>fck: </label>
+        <input type="number" name="fck" value="16"> concrete characteristic cylinder compressive strength (MPa)<br>
+        <label>k1: </label>
+        <input type="number" name="k1"  value="0.85"><br>
+        <label>e_cu: </label>
+        <input type="number" name="e_cu" value="0.003"> ultimate strain where concrete fails<br>
+        <label>fyk: </label>
+        <input type="number" name="fyk" value="365"> steel characteristic yield strength (MPa)<br>
+        <label>Es: </label>
+        <input type="number" name="Es" value="200000"> steel modulus of elasticity (MPa)<br>
+        <label>e_su: </label>
+        <input type="number" name="e_su" value="0.1"> ultimate strain where steel fails<br>
+        <br>
+        <strong>Section Properties: </strong><br>
+        <label>b: </label>
+        <input type="number" name="b" value="500"> width of the section (mm)<br>
+        <label>h: </label>
+        <input type="number" name="h" value="500"> depth of the section (mm)<br>
+        <label>xs: </label>
+        <input type="text" name="xs" value="-220, 220, -220, 220"> location of steel members with respect to center of gravity (mm)<br>
+        <label>ys: </label>
+        <input type="text" name="ys"  value="220, 220, -220, -220"> location of steel members with respect to center of gravity (mm)<br>
+        <label>As: </label>
+        <input type="text" name="As" value="1061, 1061, 1061, 1061"> area of the steel (mm2)<br>
+        <br>
+        <strong>External Properties: </strong><br>
+        <label>N: </label>
+        <input type="number" name="N" value="1000"> axial load (Newton) | N_max = 0.85*fck*b*h+sum(As)*fyk <br>
+        <br>
+        <label>#of points: </label>
+        <input type="number" name="steps" value="100"><br>
+        <br>
+        <input type="submit" value="Submit"></input>
+    </form>
+    <br>
+    <iframe name='frame_plot' width="50%" height="600" frameborder="0"marginwidth="0"marginheight="0" scrolling="no"></iframe>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <br>
+  <p style="padding: 0 20px 0 20px">
+    Behaviors of materials are modeled with
+    Hosnegtad for concrete and elastic-perfect plastic for steel. <br>Effect of
+    confinement on core concrete, strain-hardening of steel, and tensile strength of concrete are
+    neglected. 
+  </p>
+  <div style="display: inline-block;width: 45%;min-width: 200px;">
+    <form action="concrete.php" method="get" target="concrete_plot">
+      <fieldset>
+        <legend>Material Properties of Concrete :</legend>
+        <label>fck: </label>
+        <input type="number" name="fck" value="25"><br>
+        <label>epsilon_co: </label>
+        <input type="number" name="epsilon_co"  value="0.002"><br>
+        <label>epsilon_cu: </label>
+        <input type="number" name="epsilon_cu" value="0.003"><br>
+        <label>#of points: </label>
+        <input type="number" name="steps_c" value="100"><br>
+        <input type="submit" value="Submit"></input>
+      </fieldset>
+    </form>
+    <br>
+      <iframe name='concrete_plot' width="100%" height="600" frameborder="0"marginwidth="0"marginheight="0"scrolling="no"></iframe>
+  </div>
+  <div style="display: inline-block;width: 4%;"></div>
+  <div style="display: inline-block;width: 45%;min-width: 200px;">
+    <form action="steel.php" method="get" target="steel_plot">
+      <fieldset>
+        <legend>Material Properties of Steel :</legend>
+        <label for="fyk">fyk: </label>
+        <input type="number" name="fyk" value="365"><br>
+        <label for="Es">Es: </label>
+        <input type="number" name="Es"  value="200000"><br>
+        <label for="epsilon_su">epsilon_su: </label>
+        <input type="number" name="epsilon_su" value="0.1"><br>
+        <label for="steps_s">#of points: </label>
+        <input type="number" name="steps_s" value="1000"><br>
+        <input type="submit" value="Submit"></input>
+      </fieldset>
+    </form>
+    <br>
+      <iframe name='steel_plot' width="100%" height="600" frameborder="0"marginwidth="0"marginheight="0"scrolling="no"></iframe>
+  </div>
+
+</body>
+</html>

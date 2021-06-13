@@ -1,0 +1,27 @@
+.maindiv {
+	width: 100%;
+	border-radius: 20px;
+	font-family: Arial;
+}
+
+#div1 {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	text-align: center;
+	font-size: 2em;
+}
+
+#div2 {	
+	padding: 5px;
+	font-size: 1.2em;
+}
+
+img {
+	margin-bottom: 10px;
+  	border-radius: 8px;
+  	vertical-align: middle;
+  	width: 45%;
+}
+img, .h2{
+  	margin: 2%;
+}
