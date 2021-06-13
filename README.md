@@ -1,2 +1,5 @@
 # MyWebSite
-My personal simple and static web site.
+
+This is my personal web site.
+I developed it with pure HTML, CSS and PHP codes without any framework.
+It has a very basic desing, and completely static.
